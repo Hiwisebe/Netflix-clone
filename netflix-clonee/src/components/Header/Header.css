@@ -1,5 +1,5 @@
 .header-outer-container{
-position: sticky;
+position:sticky;
 top: 0;
 display: flex;
 justify-content: center;
@@ -13,6 +13,13 @@ transition-timing-function: ease-in;
 z-index: 1;
 
 }
+/* .nav.logo{
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+    background-color: white;
+} */
 .header-container{
     width: 90%;
     display: flex;
