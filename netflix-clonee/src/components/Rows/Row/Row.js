@@ -21,18 +21,21 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     })();
   }, [fetchUrl]);
 
-    const handleClick = (movie) => {
-      if (trailerUrl) {
-        setTrailerUrl("");
-      } else {
-        movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
-          (url) => {
-          //   console.log(url);
-           const urlParams=new URLSearchParams(new URL(url).search)
-          //   console.log(urlParams);
-          //   console.log(urlParams.get("v"));
-            setTrailerUrl(urlParams.get("v"));
-      })}}
+  const handleClick = (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
+      movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
+        (url) => {
+            console.log(url);
+          const urlParams = new URLSearchParams(new URL(url).search);
+            console.log(urlParams);
+            console.log(urlParams.get("v"));
+          setTrailerUrl(urlParams.get("v"));
+        }
+      );
+    }
+  };
 
   const opts = {
     height: "390",
@@ -45,10 +48,10 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     <div className="row">
       <h1>{title}</h1>
       <div className="row-posters">
-        {movies?.map((movie, index) => (
+        {movies?.map((movie) => (
           <img
             onClick={() => handleClick(movie)}
-            key={index}
+            // key={index}
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}

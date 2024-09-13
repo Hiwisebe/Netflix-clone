@@ -1,53 +1,56 @@
-.header-outer-container{
-position:sticky;
-top: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgb(20,20,20);
-background-color: transparent;
-height: 10vh;
-color: white;
-transition: all 0.5s;
-transition-timing-function: ease-in;
-z-index: 1;
-
+.header-outer-container {
+  width: 100%;
+  /* position: sticky; */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(20, 20, 20); */
+  background-color: transparent;
+  /* height: 10vh; */
+  color: white;
+  /* transition: all 0.5s;
+  transition-timing-function: ease-in; */
+  z-index: 1;
+  
 }
-/* .nav.logo{
-    position: fixed;
-    left: 20px;
-    width: 80px;
-    object-fit: contain;
-    background-color: white;
+ .nav {
+  position: fixed;
+  left: 20px;
+  width: 100%; 
+  object-fit: contain;
+  background-color: white;
+} 
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .nav-black {
+  background-color: rgb(20, 20, 20);
 } */
-.header-container{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    
+.header-left ul {
+  /* max-width:140%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.90em;
 }
-.nav-black{
-    background-color: rgb(20,20,20);
+.header-left ul li {
+  padding-left: 0.75rem;
 }
-.header-left ul{
-    width: 140%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-    font-size: 0.85em;
+.header-right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  font-size: 0.75em;
 }
-.header-right ul{
-    width: 140%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    list-style: none;
-    font-size: 0.75em;
-
+.header-right ul li {
+  padding-left: 0.75rem;
 }
